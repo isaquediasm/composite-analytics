@@ -25,9 +25,7 @@ class Composite {
       this._setConfig({ appKey });
       this.registerActor();
       return this;
-    } catch (e) {
-      console.log('## ERROR CONSTRUCTOR: ', e);
-    }
+    } catch (e) {}
   }
 
   async registerActor() {

@@ -4,20 +4,16 @@ import api from '../api';
 const Actor = {
   async register() {
     try {
-      console.log('## REGISTERING ACTOR');
       const existingActor = this.getActor();
-      console.log('## EXISTSS', existingActor);
 
       if (existingActor) return Promise.resolve(existingActor);
 
       const actor = await api.post('/actors/');
 
-      console.log(actor);
       this._setActorId(actor);
 
       return Promise.resolve(actor);
     } catch (err) {
-      console.log('#ERROR', err);
       // log here
     }
   },
@@ -25,7 +21,7 @@ const Actor = {
   async identify(properties) {
     try {
       const currActor = this.getActor();
-      console.log('composite', '#IDENTIFY');
+
       if (currActor === null)
         throw new Error(
           'Please, register an actor before trying to identify it.'
@@ -36,7 +32,6 @@ const Actor = {
         properties
       );
 
-      console.log('#update', actor);
       this._setActorId(actorId);
 
       return Promise.resolve(actorId.value);

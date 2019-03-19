@@ -2,7 +2,7 @@ import config from '../config.js';
 
 function settings(method, apiKey, body) {
   const _body = body ? { body: JSON.stringify(body) } : {};
-  console.log('##BODY', _body);
+
   return {
     method,
     headers: {
