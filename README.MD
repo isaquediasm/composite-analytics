@@ -2,6 +2,19 @@
 
 Javascript-based library that stablishes the communication between an arbitrary client and an receiver API based on the given set of events and actors.
 
+## Setting up
+
+Just change the constants in the config file:
+
+```js
+const config = {
+  api: {
+    url: 'YOUR_API_URL'
+  },
+  storage_prefix: 'YOUR_STORAGE_PREFIX'
+};
+```
+
 ### init(config)
 
 Initializes the Composite library in the application.
