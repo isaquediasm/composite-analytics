@@ -1,6 +1,6 @@
 # Composite Javascript client
 
-Javascript-based library that stablishes the communication between the client and the Composite API based on the given set of events and actors.
+Javascript-based library that stablishes the communication between an arbitrary client and an receiver API based on the given set of events and actors.
 
 ### init(config)
 
